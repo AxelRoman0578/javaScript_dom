@@ -23,7 +23,6 @@ const temas = [
     { titulo: "Variables y funciones", detalle: "Guardar valores y reutilizar operaciones." },
     { titulo: "Arreglos y objetos", detalle: "Organizar información estructurada." },
     { titulo: "Eventos y DOM", detalle: "Responder al usuario y modificar la página." },
-    { titulo: "Manipulación del DOM", detalle: "Modificar elementos y contenido de una página web." }
 ];
 
 const contenedorTemas = document.querySelector("#lista-temas");
@@ -59,7 +58,7 @@ formularioTema.addEventListener("submit", (evento) => {
     mensajeTema.textContent = "Escribe un tema de al menos 3 caracteres.";
     return;
   }
-  temas.push({ titulo, detalle: "Tema agregado durante la práctica." });
+  temas.unshift({ titulo, detalle: "Tema agregado durante la práctica." });
   mostrarTemas();
   formularioTema.reset();
   mensajeTema.textContent = "Tema agregado correctamente.";
